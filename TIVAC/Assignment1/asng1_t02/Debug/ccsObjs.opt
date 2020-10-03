@@ -1,0 +1,1 @@
+"./asng1_t02_TIVAC123g.obj" "./rgb_commands.obj" "./startup_ccs.obj" "./drivers/buttons.obj" "./drivers/rgb.obj" "./utils/cmdline.obj" "./utils/uartstdio.obj" "./utils/ustdlib.obj" "../qs-rgb_ccs.cmd" -llibc.a -l"C:/ti/tivaware_c_series_2_1_4_178/driverlib/ccs/Debug/driverlib.lib" -l"C:/ti/tivaware_c_series_2_1_4_178/usblib/ccs/Debug/usblib.lib" 
