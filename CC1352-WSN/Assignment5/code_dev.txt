@@ -1,0 +1,2 @@
+develop collector code using adding_new_sensor guide
+	add on the generic sensor message definitions into smsgs
