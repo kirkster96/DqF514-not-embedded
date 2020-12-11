@@ -1,0 +1,60 @@
+digraph Model
+{
+    graph[rankdir=LR]
+
+    // mod.$name=/ti/devices/CCFG
+    ti_devices_CCFG -> ti_devices_CCFGTemplate0
+
+    // mod.$name=/ti/devices/CCFGTemplate
+
+    // mod.$name=/ti/devices/DriverLib
+
+    // mod.$name=/ti/display/Display
+    CONFIG_DISPLAY -> ti_drivers_Board
+    CONFIG_DISPLAY -> CONFIG_DISPLAY_UART
+
+    // mod.$name=/ti/drivers/AESCCM
+    CONFIG_AESCCM_0 -> ti_drivers_DMA
+    CONFIG_AESCCM_0 -> ti_drivers_Power
+    CONFIG_AESCCM_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/Board
+    ti_drivers_Board -> ti_devices_DriverLib
+
+    // mod.$name=/ti/drivers/DMA
+    ti_drivers_DMA -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/GPIO
+    ti_drivers_GPIO -> ti_drivers_Power
+    ti_drivers_GPIO -> ti_drivers_Board
+    CONFIG_GPIO_RLED -> CONFIG_PIN_RLED
+    CONFIG_GPIO_GLED -> CONFIG_PIN_GLED
+    CONFIG_GPIO_BTN1 -> CONFIG_PIN_BTN1
+    CONFIG_GPIO_BTN2 -> CONFIG_PIN_BTN2
+
+    // mod.$name=/ti/drivers/NVS
+    CONFIG_NVSINTERNAL -> ti_drivers_Board
+    CONFIG_NVSINTERNAL -> ti_drivers_nvs_NVSCC26XX0
+
+    // mod.$name=/ti/drivers/PIN
+    ti_drivers_PIN -> ti_drivers_Power
+    ti_drivers_PIN -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/Power
+    ti_drivers_Power -> ti_devices_CCFG
+    ti_drivers_Power -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RF
+    ti_drivers_RF -> ti_drivers_Power
+    ti_drivers_RF -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RTOS
+
+    // mod.$name=/ti/drivers/UART
+    CONFIG_DISPLAY_UART -> ti_drivers_Power
+    CONFIG_DISPLAY_UART -> ti_drivers_Board
+    CONFIG_DISPLAY_UART -> CONFIG_PIN_UART_TX
+    CONFIG_DISPLAY_UART -> CONFIG_PIN_UART_RX
+
+    // mod.$name=/ti/drivers/nvs/NVSCC26XX
+}
